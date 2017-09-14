@@ -5,8 +5,6 @@ function bubbleSort(array) {
     for(var i=0; i<array.length; i++){
       if(array[i] > array[i+1]){
         bubbleSort.swap(array, i, i+1);
-        // array[i] = array[i+1];
-        // array[i+1] = temp;
         notDone = true;
       } else {
         continue;
