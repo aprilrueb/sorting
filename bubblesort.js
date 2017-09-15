@@ -1,10 +1,10 @@
 function bubbleSort(array) {
   var notDone = true;
-  while(notDone){
+  while (notDone){
     notDone = false;
-    for(var i=0; i<array.length; i++){
-      if(array[i] > array[i+1]){
-        bubbleSort.swap(array, i, i+1);
+    for (var i = 0; i < array.length; i++){
+      if (array[i] > array[i + 1]){
+        bubbleSort.swap(array, i);
         notDone = true;
       } else {
         continue;
@@ -14,8 +14,8 @@ function bubbleSort(array) {
   return array;
 }
 
-bubbleSort.swap = function(array, index1, index2){
-  var temp = array[index1];
-  array[index1] = array[index2];
-  array[index2] = temp;
-}
+bubbleSort.swap = function(array, index){
+  var temp = array[index];
+  array[index] = array[index + 1];
+  array[index + 1] = temp;
+};
